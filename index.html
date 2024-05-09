@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="main__content">
+      <div class="form__container">
+
+        <h1 class="form__title heading__text">Stay updated!</h1>
+        <p class="form__info body__text">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="updates__list">
+          <li class="body__text">Product discovery and building what matters</li>
+          <li class="body__text">Measuring to ensure updates are a success</li>
+          <li class="body__text">And much more!</li>
+        </ul>
+
+        <form action="" class="form">
+          <div class="tiny__txt__container">
+            <label class="form__label tiny_text" for="email">Email Adress</label>
+            <span class="form__error__message tiny_text">Valid email required</span>
+          </div>
+          <input class="form__input" type="email" id="email" placeholder="email@company.com">
+          <button class="form__btn" type="submit" onclick="checkError(event)">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+
+      <div class="img__container">
+        <img class="decoration__img" src="" alt="decoration desktop">
+      </div>
+    </div>
+
+    <div class="validation disabled">
+      <div class="validation__txt">
+        <img src="./assets/images/icon-success.svg" alt="success">
+        <h1 class="validation__title heading__text">Thanks for subscribing! </h1>
+        <p class="validation__info body__text">A confirmation email has been sent to <span id="client__email"></span>. 
+          Please open it and click the button inside to confirm your subscription.</p>
+      </div>
+        <button class="validation__btn" onclick="reset(event)">Dismiss message</button>
+    </div>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
